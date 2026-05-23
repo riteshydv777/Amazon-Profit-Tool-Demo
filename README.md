@@ -8,6 +8,11 @@
 
 ![Order Report](img3.jpeg)
 
+![Order Report](img4.jpeg)
+
+![Order Report](img5.jpeg)
+
+
 🔥 Amazon Profit Analyzer – Backend (Spring Boot)
 This backend service processes Amazon Order Reports and Settlement Reports to calculate:
 
