@@ -1,5 +1,13 @@
 # Amazon-Profit-Tool-Demo
 
+## Screenshots
+
+![Dashboard](img1.jpeg)
+
+![Profit Analysis](img2.jpeg)
+
+![Order Report](img3.jpeg)
+
 🔥 Amazon Profit Analyzer – Backend (Spring Boot)
 This backend service processes Amazon Order Reports and Settlement Reports to calculate:
 
