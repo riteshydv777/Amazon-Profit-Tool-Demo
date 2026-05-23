@@ -12,117 +12,88 @@
 
 ![Order Report](img5.jpeg)
 
+# Amazon Profit Analyzer
 
-🔥 Amazon Profit Analyzer – Backend (Spring Boot)
-This backend service processes Amazon Order Reports and Settlement Reports to calculate:
+A full-stack business analytics application built to process Amazon seller reports and calculate accurate profit insights using Spring Boot and React.
 
-Total Revenue
+---
 
-Total Cost (SKU-wise cost)
+## Features
 
-Total Profit
+- Upload Amazon Order Reports
+- Upload Amazon Settlement Reports
+- SKU-wise Cost Management
+- Profit & Revenue Analytics
+- JWT-based Authentication
+- Dashboard for Business Insights
 
-Profit Margin
+---
 
-SKU-wise Profit Breakdown
+## Backend (Spring Boot)
 
-🛠 Tech Stack
--Java 17+
+The backend service processes Amazon reports and calculates:
 
--Spring Boot
+- Total Revenue
+- Total Cost (SKU-wise)
+- Total Profit
+- Profit Margin
+- SKU-wise Profit Breakdown
 
--Spring Security (JWT)
+### Tech Stack
 
--MySQL
+- Java 17
+- Spring Boot
+- Spring Security (JWT)
+- MySQL
+- Hibernate / JPA
+- Maven
 
--JPA / Hibernate
+---
 
--Maven
+## Frontend (React + Vite)
 
-🔐 Authentication APIs
-Register user --> POST /api/auth/register
+The frontend dashboard allows users to:
 
-Login & get JWT --> POST /api/auth/login
+- Register & Login
+- Upload CSV Reports
+- Manage SKU Costs
+- View Profit Analytics Dashboard
 
-Upload Amazon Order CSV --> POST /api/upload/orders
+### Frontend Tech Stack
 
-Upload Amazon Settlement CSV --> POST /api/upload/settlement
+- React
+- Vite
+- Axios
+- React Router
+- Tailwind CSS
 
-🔒 Security Notes
-JWT-based authentication
+---
 
-Stateless session
+## Authentication APIs
 
-CORS enabled for frontend (localhost:5173)
+| Endpoint | Method | Description |
+|---|---|---|
+| `/api/auth/register` | POST | Register User |
+| `/api/auth/login` | POST | Login & Generate JWT |
+| `/api/upload/orders` | POST | Upload Order CSV |
+| `/api/upload/settlement` | POST | Upload Settlement CSV |
 
-🔄 How Profit Is Calculated
+---
+
+## Security
+
+- JWT Authentication
+- Stateless Session Management
+- Role-based Access
+- CORS Configuration
+
+---
+
+## Profit Calculation Logic
+
 For each SKU:
 
-Revenue = Sum(order item price)
-
-Cost = quantity × cost_price
-
+```text
+Revenue = Order Item Price
+Cost = Quantity × Cost Price
 Profit = Revenue − Cost − Amazon Fees
-
-Overall:
-
-Total Profit = Total Revenue − Total Cost
-
-Margin (%) = (Profit / Revenue) × 100
-
-🧩 Architecture Overview
-
-🏗 System Architecture
-The system follows a modern full-stack architecture:
-
-React frontend for user interaction
-
-Spring Boot backend for business logic
-
-JWT for authentication
-
-MySQL for persistent storage
-
-CSV/Excel parsers for Amazon reports
-
-
-📊 Amazon Profit Analyzer – Frontend (React + Vite)
-This frontend provides a dashboard UI to:
-
-Login / Register
-
-Upload Amazon CSV reports
-
-Enter SKU costs
-
-View profit analytics
-
-🛠 Tech Stack
-React (Vite)
-
-JavaScript
-
-Axios
-
-React Router
-
-Tailwind CSS
-
-⚙️ Prerequisites
-Node.js 18+
-
-npm
-
-Git
-
-
-🔐 Pages Flow
-Login / Register
-
-Upload Order CSV
-
-Upload Settlement CSV
-
-Enter SKU cost
-
-View Profit Dashboard
